@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Andrej Svetlošák, PhD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f6f8fb;
+      margin: 0;
+    }
+    #container {
+      max-width: 960px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 2px 12px #bbb;
+      padding-bottom: 36px;
+    }
+    .header-flex {
+      display: flex;
+      align-items: top;
+      gap: 2rem;
+      padding: 2rem 2rem 1.5rem 2.5rem;
+    }
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 9px #eee;
+      border: 2px solid #2267b5;
+    }
+    h1 {
+      margin-bottom: .6em;
+      color: #204d74;
+    }
+    .subtitle {
+      color: #204d74;
+      margin-top: -0.5em;
+      font-weight: 500;
+      font-size: 1em;
+    }
+
+    /* TABS */
+    #tabnav {
+      list-style: none;
+      display: flex;
+      justify-content: stretch;
+      align-items: stretch;
+      border-bottom: 2px solid #e3e7ef;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #tabnav li {
+      flex: 1 1 0;
+      margin: 0;
+      display: flex;
+    }
+    #tabnav button {
+      width: 100%;
+      border: none;
+      background: #e4eaf6;
+      color: #204d74;
+      font-weight: bold;
+      padding: 13px 0;
+      border-radius: 10px 10px 0 0;
+      cursor: pointer;
+      font-size: 1.09em;
+      outline: none;
+      transition: .12s;
+      border-bottom: 2px solid transparent;
+      text-align: center;
+      min-width: 0;
+      flex: 1 1 0;
+    }
+    #tabnav button.active,
+    #tabnav button:hover {
+      background: #204d74;
+      color: #fff;
+      border-bottom: 2px solid #204d74;
+    }
+    .tabsection {
+      display: none;
+      padding: 2.1em 2.4em 0.8em 2.4em;
+      min-height: 130px;
+    }
+    .tabsection.active {
+      display: block;
+    }
+    @media (max-width:900px) {
+      #container {padding-bottom:15px;}
+      .header-flex {flex-direction:column;align-items:center;padding:1.2em 0.6em;}
+      #tabnav {flex-wrap:wrap;padding:0 .3em;}
+      .tabsection {padding:1.4em 0.6em;}
+    }
+    .exp-section, .degree-section, .skill-section, .conference-section, .publications-section, .awards-section {
+      line-height: 1.5;
+    }
+    .exp-section {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+    .exp-section > strong {
+      font-size: 1.12em;
+      display: inline;
+      margin-bottom: 0;
+      margin-top: 1em;
+    }
+    .exp-section em { display: inline; }
+    .exp-section ul {
+      margin: 0.3em 0 0.5em 1.1em;
+      padding: 0;
+    }
+    .exp-section ul li { margin-bottom: 0.45em; }
+    .degree-section {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+    .degree-section > strong {
+      font-size: 1.12em;
+      margin-bottom: 0;
+      display: inline;
+      margin-top: 1em;
+    }
+    .degree-section em { display: inline; }
+    .degree-section ul {
+      margin: 0.3em 0 0.5em 1.1em;
+      padding: 0;
+    }
+    .degree-section ul li { margin-bottom: 0.45em; }
+
+    .conference-section, .publications-section {
+      margin-top: 1.2em;
+      margin-bottom: 1.2em;
+    }
+    .conference-section ul, .publications-section ul {
+      margin: 0.6em 0 0.6em 1.1em;
+      padding: 0;
+    }
+    .conference-section ul li, .publications-section ul li {
+      margin-bottom: 0.45em;
+    }
+    .awards-section {
+      margin-top: 1.2em;
+      margin-bottom: 1.2em;
+    }
+    .awards-section > strong {
+      font-size: 1.08em;
+      display: inline-block;
+      margin-bottom: 0.3em;
+    }
+    .awards-section ul {
+      margin: 0.6em 0 0.6em 1.1em;
+      padding: 0;
+    }
+    .awards-section ul li {
+      margin-bottom: 0.45em;
+    }
+    .skill-section {
+      margin-top: 1.2em;
+      margin-bottom: 1.2em;
+    }
+    .skill-section > strong {
+      font-size: 1.06em;
+      display: inline-block;
+      margin-bottom: 0.2em;
+    }
+    .skill-section ul {
+      margin: 0.6em 0 0.6em 1.2em;
+      padding: 0;
+    }
+    .skill-section ul li {
+      margin-bottom: 0.4em;
+    }
+  </style>
+</head>
+<body>
+<div id="container">
+  <div class="header-flex">
+    <img class="profile-pic" src="profile.jpg" alt="Andrej Svetlošák"
+         onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png';">
+    <div>
+      <h1>Andrej Svetlošák</h1>
+      <div class="subtitle">
+        Expert on unsupervised machine learning, explainable AI, clustering and nonparametric statistics.<br>
+        Main applications: finance, large language models, and Open Banking-Type transactional data.
+      </div>
+    </div>
+  </div>
+  <ul id="tabnav">
+    <li><button class="active" onclick="switchTab(0)">About</button></li>
+    <li><button onclick="switchTab(1)">Publications and Conference Talks</button></li>
+    <li><button onclick="switchTab(2)">Professional Experience</button></li>
+    <li><button onclick="switchTab(3)">Education</button></li>
+    <li><button onclick="switchTab(4)">Awards and Scholarships</button></li>
+    <li><button onclick="switchTab(5)">Skills and Other Information</button></li>
+  </ul>
+
+  <!-- About Tab -->
+  <div class="tabsection active">
+    <h3>About</h3>
+    <p>
+      I am a Research Fellow in Statistical Learning & Financial AI at the University of Edinburgh in an industrially-oriented research project. My main research focus is explainable AI, interfacing statistical learning methods and LLMs, novel flexible neural networks and other related machine learning methods.
+    </p>
+    <p>
+      Besides developing new methodology and systems, I am also closely cooperating with an industrial partner and coordinating with other research teams involved in the project.
+    </p>
+    <p>
+      My doctorate was a multidisciplinary project between The School of Mathematics of the University of Edinburgh, The Business School of the University of Edinburgh, The Data Lab and our industry partner Inbest.ai.
+    </p>
+    <p>
+      In my doctorate I focused on nonparametric methods for personal finance analysis and unsupervised methods for quantitative market segmentation. In collaboration between private industry, state, and The University of Edinburgh, I developed new statistical methods to analyse Open Banking-Type transactional data, applying it to both micro- and macroeconomic topics.
+    </p>
+    <p>
+      At the moment I am amongst a handful of academically trained people who had this deep dive into Open Banking-Type transactional data.
+    </p>
+    <p>
+      My interests (including the methods I developed) span beyond topics from my current position or work from my thesis, and I am keen on expanding my skillset and work on data analysis and model development with practical applications.
+    </p>
+  </div>
+  
+  <!-- Publications Tab -->
+  <div class="tabsection">
+    <h4>Publications</h4>
+    <div class="publications-section">
+      <ul>
+        <li>
+          de Carvalho, Miguel, Gabriel Martos, and Andrej Svetlošák, 1 April 2025. 
+          A game-inspired algorithm for marginal and global clustering, 
+          Pattern Recognition, 
+          <a href="https://www.sciencedirect.com/science/article/pii/S0031320324009099" target="_blank">Link</a>.
+        </li>
+        <li>
+          A. Svetlošák, 23 Feb 2024, 
+          Novel statistical learning approaches for open banking-type data, 
+          <a href="https://era.ed.ac.uk/handle//1842/41562" target="_blank">Link</a>.
+    </li>
+    <li>
+      A. Svetlošák, M. de Carvalho, R. Calabrese, 23 Aug 2021. 
+      Subject-to-group statistical comparison for open banking-type data, 
+      Journal of the Operational Research Society, 
+      <a href="https://www.tandfonline.com/doi/full/10.1080/01605682.2021.1952115" target="_blank">Link</a>.
+    </li>
+  </ul>
+  <div style="display:flex; justify-content:center; gap:92px; margin-top:1.3em;">
+    <div style="text-align:center;">
+      <img src="CMV.jpg" alt="Reign and Conquer clustering algorithm" style="width:270px; height:auto; border-radius:8px; box-shadow:0 2px 10px #bbb;">
+      <div style="font-size:0.9em; color:#666; margin-top:0.4em;">Comparative Mean Value Simulation.</div>
+    </div>
+    <div style="text-align:center;">
+      <img src="RC_Example.jpg" alt="Second publication illustration" style="width:270px; height:auto; border-radius:8px; box-shadow:0 2px 10px #bbb;">
+      <div style="font-size:0.9em; color:#666; margin-top:0.4em;">Reign and Conquer clustering algorithm.</div>
+    </div>
+  </div>
+</div>
+
+
+  <h4>Conference Talks</h4>
+<div class="conference-section">
+  <ul>
+    <li>
+      Digital Transformation and Digital Economics: Principles and Practice (DXDE) 2024 (invited speaker), 
+      <a href="https://dxde.tbd.edu.vn/keynote-and-invited-speakers/" target="_blank">Link</a>.
+    </li>
+    <li>
+      The 17th conference of the International Federation of Classification Societies 2022, 
+      <a href="https://www.gfkl.org/blog/2022/03/01/17th-conference-of-the-international-federation-of-classification-societies-2/" target="_blank">Link</a>.
+    </li>
+    <li>
+      The 7th edition of the workshop on Models and Learning in Clustering and Classification 2022, 
+      <a href="http://mbc2.unict.it/general-information" target="_blank">Link for 2025</a>.
+    </li>
+     <li>
+      The International Conference of the ERCIM WG on Computational and Methodological Statistics (2018, 2019, and 2022), 
+      <a href="https://www.cmstatistics.org/CFECMStatistics2025/" target="_blank">Link for 2025</a>.
+    </li>
+    <li>Centre for Statistics Annual Conference 2019 (poster),
+      <a href="https://centreforstatistics.maths.ed.ac.uk/events/past-events-and-recordings/2019-events/cfsc2019" target="_blank">Link</a>.
+    </li>
+    <li>
+      International Workshop on Statistical Modelling 2019, 
+      <a href="http://www.statmod.org/workshops_archive_proceedings_2019.html" target="_blank">Link</a>.
+    </li>
+    <li>
+      Financial Health Check Data Fest 2017 and 2018 (organizer and speaker), 
+       <a href="https://thedatalab.com/datafest/" target="_blank">Link for 2025</a>.
+    </li>
+ 
+    <li>
+      Credit Scoring and Credit Control Conference XVI (attendant 2018, poster 2019), 
+      <a href="https://www.crc.business-school.ed.ac.uk/conference-2025" target="_blank">Link for 2025</a>.
+    </li>
+   
+  </ul>
+</div>
+
+    <div class="awards-section">
+  <h4>Other Academic Events and Activities:</h4>
+  <ul>
+      <li>Session chair in the Centre for Statistics Annual Conference <a href="https://centreforstatistics.maths.ed.ac.uk/events/the-cfs-annual-conference/cfs-annual-conference-2024" target="_blank">2024, <a href="https://centreforstatistics.maths.ed.ac.uk/cfs-annual-conference-2025" target="_blank">2025</a>.</li>
+      <li>Reviewer for articles in the journal <a href="https://journals.plos.org/plosone/" target="_blank">Plos One</a> and the journal <a href="https://www.tandfonline.com/journals/ucgs20" target="_blank">Journal of Computational and Graphical Statistics</a>.</li>
+      <li>Organisational assistant of the <a href="https://bayesian.org/isba2018/" target="_blank">2018 International Society for Bayesian Analysis conference</a>, and <a href="https://www.linkedin.com/posts/edinburgh-centre-for-financial-innovations_generative-ai-modelling-for-extreme-events-activity-7329063512138223616-ZdFP/" target="_blank">Generative AI Models for Extreme Events 2025</a>. </li>
+     
+  </ul>
+  </div>
+</div>
+<div class="tabsection">
+  <div class="exp-section">
+    <strong>The University of Edinburgh, School of Mathematics</strong>
+    <em>Research Fellow in Statistical Learning & Financial AI</em>April 2024 – Ongoing, Edinburgh, Scotland.
+    <ul>
+      <li>Developing a practical and methodological interface between statistical intelligence, interpretable machine learning and large language models.</li>
+      <li>Statistics expert in a joint project of the University of Edinburgh (School of Mathematics and School of Informatics) and a £500 billion asset management fund.</li>
+      <li>Software implementation of state of the art methodology using Python.</li>
+      <li>Preparation of reports, coordination of relevant parts of the project and communication of results.</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>The University of Edinburgh, School of Mathematics and Business School</strong>
+    <em>Doctoral Researcher</em>September 2017 – December 2023, Edinburgh, Scotland.
+    <ul>
+      <li>Developed statistical and machine learning methods tailored for micro- and macroeconomic analysis of Open Banking-Type data. Focused on nonparametric statistics and unsupervised learning, including smooth predictors for time series, clustering, and ML.</li>
+      <li>Engaged as expert in a project with the School of Mathematics, the Business School, governmental institution (the Data Lab), and industry (Inbest.ai).</li>
+      <li>Led the organization of several events for participants from industry, academia, governmental organizations, and non-profits.</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>Business School of the University of Edinburgh</strong>
+    <em>Data Mining Tutor (Master Level)</em>September 2018 – September 2017, Edinburgh, Scotland.
+    <ul>
+      <li>Led programming exercises (R-based data mining).</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>Freie Universität Berlin</strong>
+    <em>Economics Tutor (Bachelor Level)</em>September 2011 – September 2017, Berlin, Germany.
+    <ul>
+      <li>Led exercises in Microeconomics (Prof. Dr. H. Bester), Macroeconomics (Prof. Dr. M. Trabandt), and Introduction into Economics (Prof. Dr. R. Schöb, Prof. Dr. W. Schrettl, Prof. Dr. T. Bönke).</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>Krämer Marktforschung</strong>
+    <em>Statistician and Assistant of Studio Director</em>September 2015 - October 2015, Berlin, Germany.
+    <ul>
+      <li>Prepared overviews of running projects and helped with future project organization.</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>Freie Universität Berlin</strong>
+    <em>Student Assistant to Prof. Dr. Steiner</em>April 2012 – August 2012, Berlin, Germany.
+    <ul>
+      <li>Prepared data from the German Socio-economic Panel (SOEP) for analysis and statistical modelling: summary statistics, regression model preparation and analysis.</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>Multinational Academy Látky (Deutsche Schüler Akademie)</strong>
+    <em>Economics Lecturer</em>August 2012, Látky, Slovakia.
+    <ul>
+      <li>Prepared and taught a course on decision theories and modeling behavior in economics.</li>
+    </ul>
+  </div>
+
+    <div class="exp-section">
+    <strong>German – Slovak Industrial Chamber of Commerce (DSIHK)</strong>
+    <em>Internship</em>September 2011 – October 2011, Bratislava, Slovakia.
+    <ul>
+      <li>Conducted research on Slovak companies interested in cooperation on specific projects with German counterparts, established first contacts and organized bilateral meetings.</li>
+      <li>Translated legal documents (Slovak &lt;–&gt; German).</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>Via Iuris</strong>
+    <em>Internship</em>July 2009, Pezinok, Slovakia.
+    <ul>
+      <li>Updated the database of the NGO specializing in human, civil rights, and environmental issues.</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.exp-section {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  line-height: 1.5;
+}
+.exp-section > strong {
+  font-size: 1.12em;
+  display: block;
+  margin-top: 0.8em;
+  margin-bottom: 0;          /* absolutely no extra space below bold */
+}
+.exp-section em {
+  margin-top: 0;             /* ensures no unexpected margin if block/inline-block */
+  display: block;            /* makes each on a new line, like a header/subheader */
+}
+.exp-section ul {
+  margin: 0.2em 0 0.4em 1.1em; /* less space before bullets */
+  padding: 0;
+}
+.exp-section ul li {
+  margin-bottom: 0.45em;     /* you can also tweak this if you want bullets even closer */
+}
+
+.conference-section {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  line-height: 1.5;
+}
+.conference-section ul {
+  margin: 0.6em 0 0.6em 1.1em;
+  padding: 0;
+}
+.conference-section ul li {
+  margin-bottom: 0.45em;
+}
+</style>
+
+<div class="tabsection">
+  <div class="degree-section">
+  <strong>The University of Edinburgh, School of Mathematics and Business School</strong><br>
+  <em>Doctor of Philosophy, Statistics</em>, September 2017 – July 2023, Edinburgh, Scotland.
+  <ul>
+    <li>Thesis title: “Novel Statistical Learning Approaches for Open Banking-Type Data”.</li>
+    <li>Industrial doctorate awarded by the Data Lab, The University of Edinburgh and Inbest.ai.
+    <li>Focus on nonparametric statistics, unsupervised machine learning with application to financial analysis, clustering and market segmentation with application to open-banking personal financial data.</li>
+    <li>Organization of several events for participants from industry, academia, governmental organizations, and non-profits. </li>
+  </ul>
+</div>
+
+<div class="degree-section">
+  <strong>Freie Universität Berlin</strong><br>
+  <em>Bachelor of Science, Economics (Grade 1.6)</em>, 2010 – 2013, Berlin, Germany.
+  <ul>
+    <li>Thesis on time inconsistent consumer behavior and its welfare implications.</li>
+    <li>Key coursework: empirical data analysis and statistics, game theory, environmental-, behavioral-, labor-, micro- and macroeconomics.</li>
+    <li>Best in year and awarded the German Academic Exchange Service prize for best foreign student.</li>
+  </ul>
+</div>
+
+<div class="degree-section">
+  <strong>Freie Universität Berlin</strong><br>
+  <em>Bachelor of Science, Mathematics (Expected grade 2.3)</em>, Berlin, Germany.
+  <ul>
+    <li>Thesis (under completion: 2023).</li>
+    <li>Key coursework: mathematics, statistics, stochastics, graph theory, minor in statistics, and extracurricular courses in physics.</li>
+  </ul>
+</div>
+
+  <div class="degree-section">
+    <strong>Gymnasium Jána Papánka </strong><br>
+    <em>High School Diploma (Average Maturita Grade 1.0)</em>, September 2002 – 2010, Bratislava, Slovakia.
+    <ul>
+      <li>Maturita exams in: Slovak, English, German, History, and Mathematics.</li>
+      <li>Honoured as the most successful graduate of the Gymnasium Jána Papánka for the years 2002-2012. </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.degree-section {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  line-height: 1.5;
+}
+.degree-section > strong {
+  font-size: 1.12em;
+  margin-bottom: 0;
+  display: inline;
+  margin-top: 1em;
+}
+.degree-section em {
+  display: inline;
+}
+.degree-section ul {
+  margin: 0.3em 0 0.5em 1.1em;
+  padding: 0;
+}
+.degree-section ul li {
+  margin-bottom: 0.45em;
+}
+</style>
+  <div class="tabsection">
+  <h4>Awards and Other Professional Activities</h4>
+
+  <div class="awards-section">
+    <ul>
+      <li>Scholarship for an industrial doctorate awarded by the Data Lab, The University of Edinburgh and Inbest.ai. <a href="https://www.linkedin.com/posts/andrej-svetlosak_andrej-activity-7315314375941120000-Uh5n?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAA3IiPIBm5DzLy6UH_RNS_2R4DgzA8brrLQ" target="_blank">Link</a>.</li>
+      <li>Scholarship for university studies in Germany from the German Academic Exchange Service (DAAD) –
+        <em>“Vollstipendium zur wissenschaftlichen Aus- und Fortbildung in Deutschland“</em>.</li>
+      <li>Best in class in Economics, DAAD prize for best foreign student. <a href="https://www.fu-berlin.de/campusleben/vorgestellt/2018/180117-andrej-svetlosak-daad-stipendiat/index.html" target="_blank">Link</a>.</li>
+      <li>Teaching award of the School of Economics and Business of the Freie Universität Berlin (2017). <a href="https://www.fu-berlin.de/campusleben/vorgestellt/2018/180117-andrej-svetlosak-daad-stipendiat/index.html" target="_blank">Link</a>.</li>
+      <li>Honored as the most successful graduate of the Gymnasium Jána Papánka (secondary level education) for the years 2002–2012.</li>
+      <li>Winner of the national German language competition (2001 and 2009).</li>
+       <li>Slovak representative in the “Benjamin Franklin Transatlantic Fellows” program. US Department of State scholarship (2008). <a href="https://exchanges.state.gov/us/program/benjamin-franklin-summer-institutes" target="_blank">Link</a>.</li>
+       
+      <li>
+        LEMUN – Leiden Model of United Nations delegate (2007, 2008, 2009). 
+        <a href="https://www.leidenmun.com/">Link</a>.
+      </li>
+      <li>
+        German Academic Exchange Service and Haniel Stiftung scholarship for attending the Deutsche Schüler Akademie, Metten (2009).
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+
+ .publications-section {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  line-height: 1.5;
+}
+.publications-section ul {
+  margin: 0.6em 0 0.6em 1.1em;
+  padding: 0;
+}
+.publications-section ul li {
+  margin-bottom: 0.45em;
+}
+
+.awards-section {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  line-height: 1.5;
+}
+.awards-section > strong {
+  font-size: 1.08em;
+  display: inline-block;
+  margin-bottom: 0.3em;
+}
+.awards-section ul {
+  margin: 0.6em 0 0.6em 1.1em;
+  padding: 0;
+}
+.awards-section ul li {
+  margin-bottom: 0.45em;
+}
+</style>
+
+<div class="tabsection">
+  <div class="skill-section">
+    <div>
+      <strong>Languages</strong><br>
+      Slovak (native); English (native level); German (native level).
+    </div>
+    <ul>
+      <!-- Optional: If you want an explicit list; can remove this ul for a more compact look -->
+    </ul>
+
+    <div style="margin-top:1em;">
+      <strong>Main Programming Language: R</strong><br>
+      <ul>
+        <li>Development and application of nonparametric statistical algorithms and unsupervised learning methods</li>
+        <li>Visualisation via R Shiny and GGplot</li>
+      </ul>
+    </div>
+
+    <div style="margin-top:1em;">
+      <strong>Secondary Programming Language: Python</strong><br>
+      <ul>
+        <li>Development of software and implementation of methods from AI, machine learning, language models and statistics.
+        </li>
+        <li>implementation and maintenance of shared code modules.</li>
+      </ul>
+    </div>
+
+    <div style="margin-top:1em;">
+      <strong>Other Software Skills</strong>
+      <ul>
+        <li>Git, SQL, LaTeX, and Microsoft Office suite.</li>
+      </ul>
+    </div>
+
+    <div style="margin-top:1em;">
+      <strong>Other Personal Interests</strong>
+      <ul>
+        <li>Music: degree in classical guitar, self-taught piano, and vocalist.</li>
+        <li>Hiking</li>
+        <li>Chess</li>
+        <li>Philosophy</li>
+        <li>Arts</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+.skill-section {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  line-height: 1.5;
+}
+.skill-section > strong {
+  font-size: 1.06em;
+  display: inline-block;
+  margin-bottom: 0.2em;
+}
+.skill-section ul {
+  margin: 0.6em 0 0.6em 1.2em;
+  padding: 0;
+}
+.skill-section ul li {
+  margin-bottom: 0.4em;
+}
+
+</style>
+</div>
+<script>
+function switchTab(idx) {
+  var tabs = document.querySelectorAll('#tabnav button');
+  var secs = document.querySelectorAll('.tabsection');
+  for (var i = 0; i < tabs.length; ++i) {
+    tabs[i].classList.toggle('active', i===idx);
+    secs[i].classList.toggle('active', i===idx);
+  }
+}
+</script>
+</body>
+</html>
