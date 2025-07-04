@@ -345,52 +345,121 @@
   </div>
 </div>
 
-<!-- Place this CSS in your global style (preferably in the <head>) -->
+<div class="tabsection">
+  <div class="exp-section">
+    <strong>The University of Edinburgh, School of Mathematics</strong>
+    <em>Research Fellow in Statistical Learning & Financial AI</em>April 2024 – Ongoing, Edinburgh, Scotland.
+    <ul>
+      <li>Developing a practical and methodological interface between statistical intelligence, interpretable machine learning and large language models.</li>
+      <li>Statistics expert in a joint project of the University of Edinburgh (School of Mathematics and School of Informatics) and a £500 billion asset management fund.</li>
+      <li>Software implementation of state of the art methodology using Python.</li>
+      <li>Preparation of reports, coordination of relevant parts of the project and communication of results.</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>The University of Edinburgh, School of Mathematics and Business School</strong>
+    <em>Doctoral Researcher</em>September 2017 – December 2023, Edinburgh, Scotland.
+    <ul>
+      <li>Developed statistical and machine learning methods tailored for micro- and macroeconomic analysis of Open Banking-Type data. Focused on nonparametric statistics and unsupervised learning, including smooth predictors for time series, clustering, and ML.</li>
+      <li>Engaged as expert in a project with the School of Mathematics, the Business School, governmental institution (the Data Lab), and industry (Inbest.ai).</li>
+      <li>Led the organization of several events for participants from industry, academia, governmental organizations, and non-profits.</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>Business School of the University of Edinburgh</strong>
+    <em>Data Mining Tutor (Master Level)</em>September 2018 – September 2017, Edinburgh, Scotland.
+    <ul>
+      <li>Led programming exercises (R-based data mining).</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>Freie Universität Berlin</strong>
+    <em>Economics Tutor (Bachelor Level)</em>September 2011 – September 2017, Berlin, Germany.
+    <ul>
+      <li>Led exercises in Microeconomics (Prof. Dr. H. Bester), Macroeconomics (Prof. Dr. M. Trabandt), and Introduction into Economics (Prof. Dr. R. Schöb, Prof. Dr. W. Schrettl, Prof. Dr. T. Bönke).</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>Krämer Marktforschung</strong>
+    <em>Statistician and Assistant of Studio Director</em>September 2015 - October 2015, Berlin, Germany.
+    <ul>
+      <li>Prepared overviews of running projects and helped with future project organization.</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>Freie Universität Berlin</strong>
+    <em>Student Assistant to Prof. Dr. Steiner</em>April 2012 – August 2012, Berlin, Germany.
+    <ul>
+      <li>Prepared data from the German Socio-economic Panel (SOEP) for analysis and statistical modelling: summary statistics, regression model preparation and analysis.</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>Multinational Academy Látky (Deutsche Schüler Akademie)</strong>
+    <em>Economics Lecturer</em>August 2012, Látky, Slovakia.
+    <ul>
+      <li>Prepared and taught a course on decision theories and modeling behavior in economics.</li>
+    </ul>
+  </div>
+
+    <div class="exp-section">
+    <strong>German – Slovak Industrial Chamber of Commerce (DSIHK)</strong>
+    <em>Internship</em>September 2011 – October 2011, Bratislava, Slovakia.
+    <ul>
+      <li>Conducted research on Slovak companies interested in cooperation on specific projects with German counterparts, established first contacts and organized bilateral meetings.</li>
+      <li>Translated legal documents (Slovak &lt;–&gt; German).</li>
+    </ul>
+  </div>
+
+  <div class="exp-section">
+    <strong>Via Iuris</strong>
+    <em>Internship</em>July 2009, Pezinok, Slovakia.
+    <ul>
+      <li>Updated the database of the NGO specializing in human, civil rights, and environmental issues.</li>
+    </ul>
+  </div>
+</div>
+
 <style>
-/* Responsive Flex Images for Publications tab */
-.pub-pics-row {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 1.3em;
+.exp-section {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  line-height: 1.5;
 }
-.pub-pic {
-  text-align: center;
-  flex: 1 1 220px;
-  max-width: 350px;
-  min-width: 180px;
-}
-.pub-pic img {
-  width: 100%;
-  max-width: 270px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px #bbb;
+.exp-section > strong {
+  font-size: 1.12em;
   display: block;
-  margin: 0 auto;
+  margin-top: 0.8em;
+  margin-bottom: 0;          /* absolutely no extra space below bold */
 }
-.pub-caption {
-  font-size: 0.9em;
-  color: #666;
-  margin-top: 0.4em;
+.exp-section em {
+  margin-top: 0;             /* ensures no unexpected margin if block/inline-block */
+  display: block;            /* makes each on a new line, like a header/subheader */
 }
-@media (max-width: 900px) {
-  .pub-pics-row { gap: 1.2rem; }
+.exp-section ul {
+  margin: 0.2em 0 0.4em 1.1em; /* less space before bullets */
+  padding: 0;
 }
-@media (max-width: 700px) {
-  .pub-pics-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-  }
-  .pub-pic {
-    max-width: 100%;
-    width: 100%;
-  }
-  .pub-pic img {
-    max-width: 98vw;
-  }
+.exp-section ul li {
+  margin-bottom: 0.45em;     /* you can also tweak this if you want bullets even closer */
+}
+
+.conference-section {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  line-height: 1.5;
+}
+.conference-section ul {
+  margin: 0.6em 0 0.6em 1.1em;
+  padding: 0;
+}
+.conference-section ul li {
+  margin-bottom: 0.45em;
 }
 </style>
 
