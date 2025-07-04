@@ -7,17 +7,15 @@
   <style>
     html {
       box-sizing: border-box;
-      font-size: 18px; /* base font, will be scaled on small screens */
+      font-size: 18px;
     }
     *, *:before, *:after { box-sizing: inherit; }
-
     body {
       font-family: sans-serif;
       background: #f6f8fb;
       margin: 0;
       color: #10151c;
       -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
     }
     #container {
       max-width: 960px;
@@ -56,12 +54,10 @@
       font-weight: 500;
       font-size: 1em;
     }
-    /* Make all <strong> the same size everywhere */
     strong {
       font-weight: bold;
       font-size: 1.12em;
     }
-    /* TABS */
     #tabnav {
       list-style: none;
       display: flex;
@@ -116,13 +112,12 @@
       max-width: 100%;
       height: auto;
     }
-    /* Responsive adjustments */
     @media (max-width:900px) {
       html { font-size: 16px; }
       #container { padding-bottom:1rem; }
-      .header-flex {flex-direction:column;align-items:center;padding:1.2em 0.6em;}
-      #tabnav {flex-wrap:wrap; padding:0 .3em;}
-      .tabsection {padding:1.4em 0.6em;}
+      .header-flex { flex-direction:column;align-items:center;padding:1.2em 0.6em;}
+      #tabnav { flex-wrap:wrap; padding:0 .3em;}
+      .tabsection { padding:1.4em 0.6em;}
     }
     @media (max-width:600px) {
       html { font-size: 15px; }
@@ -153,9 +148,8 @@
     }
     @media (max-width:400px) {
       html { font-size: 13px; }
-      .tabsection {padding-left: 0.5em; padding-right: 0.5em;}
+      .tabsection { padding-left: 0.5em; padding-right: 0.5em;}
     }
-    /* General Section Formatting */
     .exp-section, .degree-section, .skill-section, .awards-section {
       margin-top: 2em;
       margin-bottom: 2em;
@@ -189,15 +183,59 @@
     .publications-section ul li, .conference-section ul li {
       margin-bottom: 0.45em;
     }
-    /* Prevent layout breaking by long words and URLs */
     .tabsection, .tabsection * {
       word-break: break-word;
     }
     body { overflow-x: hidden; }
+    .pub-pics-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1.3em;
+    }
+    .pub-pic {
+      text-align: center;
+      flex: 1 1 220px;
+      max-width: 350px;
+      min-width: 180px;
+    }
+    .pub-pic img {
+      width: 100%;
+      max-width: 270px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px #bbb;
+      display: block;
+      margin: 0 auto;
+    }
+    .pub-caption {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 0.4em;
+    }
+    @media (max-width: 900px) {
+      .pub-pics-row { gap: 1.2rem; }
+    }
+    @media (max-width: 700px) {
+      .pub-pics-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+      }
+      .pub-pic {
+        max-width: 100%;
+        width: 100%;
+      }
+      .pub-pic img {
+        max-width: 98vw;
+      }
+    }
   </style>
 </head>
 <body>
 <div id="container">
+  <!-- HEADER -->
   <div class="header-flex">
     <img class="profile-pic" src="profile.jpg" alt="Andrej Svetlošák"
          onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png';">
@@ -209,6 +247,7 @@
       </div>
     </div>
   </div>
+  <!-- TABS -->
   <ul id="tabnav">
     <li><button class="active" onclick="switchTab(0)">About</button></li>
     <li><button onclick="switchTab(1)">Publications and Conference Talks</button></li>
