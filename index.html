@@ -42,6 +42,11 @@
       font-weight: 500;
       font-size: 1em;
     }
+    /* --- MAKE ALL <strong> THE SAME SIZE --- */
+    strong {
+      font-size: 1.12em; /* or 1em for normal text size */
+      font-weight: bold;
+    }
 
     /* TABS */
     #tabnav {
@@ -96,84 +101,71 @@
       #tabnav {flex-wrap:wrap;padding:0 .3em;}
       .tabsection {padding:1.4em 0.6em;}
     }
-    .exp-section, .degree-section, .skill-section, .conference-section, .publications-section, .awards-section {
+
+    .section-block {
+      margin-top: 2em;
+      margin-bottom: 2em;
       line-height: 1.5;
     }
-    .exp-section {
-      margin-top: 2em;
-      margin-bottom: 2em;
+    .tabsection > .section-block:first-child {
+      margin-top: 0;
     }
-    .exp-section > strong {
-      font-size: 1.12em;
-      display: inline;
-      margin-bottom: 0;
-      margin-top: 1em;
+    .section-block > strong {
+      display: block;
+      color: #204d74;
+      margin: 0 0 0.12em 0;
     }
-    .exp-section em { display: inline; }
-    .exp-section ul {
+    .section-block > em {
+      display: block;
+      font-size: 1em;
+      font-style: italic;
+      color: #204d74;
+      margin: 0 0 0.12em 0;
+    }
+    .section-block > span {
+      display: block;
+      color: #444;
+      font-size: 0.98em;
+      margin-bottom: 0.4em;
+    }
+    .section-block ul {
       margin: 0.3em 0 0.5em 1.1em;
       padding: 0;
     }
-    .exp-section ul li { margin-bottom: 0.45em; }
-    .degree-section {
-      margin-top: 2em;
-      margin-bottom: 2em;
+    .section-block ul li {
+      margin-bottom: 0.4em;
     }
-    .degree-section > strong {
-      font-size: 1.12em;
-      margin-bottom: 0;
-      display: inline;
-      margin-top: 1em;
-    }
-    .degree-section em { display: inline; }
-    .degree-section ul {
-      margin: 0.3em 0 0.5em 1.1em;
-      padding: 0;
-    }
-    .degree-section ul li { margin-bottom: 0.45em; }
 
-    .conference-section, .publications-section {
+    .conference-section, .publications-section, .awards-section {
       margin-top: 1.2em;
       margin-bottom: 1.2em;
+      line-height: 1.5;
     }
-    .conference-section ul, .publications-section ul {
+    .publications-section ul, .conference-section ul, .awards-section ul {
       margin: 0.6em 0 0.6em 1.1em;
       padding: 0;
     }
-    .conference-section ul li, .publications-section ul li {
+    .publications-section ul li, .conference-section ul li, .awards-section ul li {
       margin-bottom: 0.45em;
     }
-    .awards-section {
-      margin-top: 1.2em;
-      margin-bottom: 1.2em;
-    }
+    /* Remove ALL other font-size: ...em for strong below! */
+    .exp-section > strong,
+    .degree-section > strong,
+    .skill-section > strong,
     .awards-section > strong {
-      font-size: 1.08em;
-      display: inline-block;
-      margin-bottom: 0.3em;
-    }
-    .awards-section ul {
-      margin: 0.6em 0 0.6em 1.1em;
-      padding: 0;
-    }
-    .awards-section ul li {
-      margin-bottom: 0.45em;
-    }
-    .skill-section {
-      margin-top: 1.2em;
-      margin-bottom: 1.2em;
+      font-size: inherit !important;
     }
     .skill-section > strong {
-      font-size: 1.06em;
-      display: inline-block;
-      margin-bottom: 0.2em;
+      font-size: inherit !important;
     }
-    .skill-section ul {
-      margin: 0.6em 0 0.6em 1.2em;
-      padding: 0;
+    .awards-section > strong {
+      font-size: inherit !important;
     }
-    .skill-section ul li {
-      margin-bottom: 0.4em;
+    .degree-section > strong {
+      font-size: inherit !important;
+    }
+    .exp-section > strong {
+      font-size: inherit !important;
     }
   </style>
 </head>
@@ -198,10 +190,23 @@
     <li><button onclick="switchTab(4)">Awards and Scholarships</button></li>
     <li><button onclick="switchTab(5)">Skills and Other Information</button></li>
   </ul>
+  <!-- ...rest of your HTML content... -->
+  <!-- No other changes are needed, your bold text will now be unified everywhere. -->
+  <script>
+    function switchTab(idx) {
+      var tabs = document.querySelectorAll('#tabnav button');
+      var secs = document.querySelectorAll('.tabsection');
+      for (var i = 0; i < tabs.length; ++i) {
+        tabs[i].classList.toggle('active', i===idx);
+        secs[i].classList.toggle('active', i===idx);
+      }
+    }
+  </script>
+</body>
+</html>
 
   <!-- About Tab -->
   <div class="tabsection active">
-    <h3>About</h3>
     <p>
       I am a Research Fellow in Statistical Learning & Financial AI at the University of Edinburgh in an industrially-oriented research project. My main research focus is explainable AI, interfacing statistical learning methods and LLMs, novel flexible neural networks and other related machine learning methods.
     </p>
@@ -221,10 +226,10 @@
       My interests (including the methods I developed) span beyond topics from my current position or work from my thesis, and I am keen on expanding my skillset and work on data analysis and model development with practical applications.
     </p>
   </div>
-  
-  <!-- Publications Tab -->
+
+  <!-- Publications and Conference Talks Tab -->
   <div class="tabsection">
-    <h4>Publications</h4>
+    <h3>Publications</h3>
     <div class="publications-section">
       <ul>
         <li>
@@ -298,7 +303,6 @@
 </div>
 
     <div class="awards-section">
-  <h4>Other Academic Events and Activities:</h4>
   <ul>
       <li>Session chair in the Centre for Statistics Annual Conference <a href="https://centreforstatistics.maths.ed.ac.uk/events/the-cfs-annual-conference/cfs-annual-conference-2024" target="_blank">2024, <a href="https://centreforstatistics.maths.ed.ac.uk/cfs-annual-conference-2025" target="_blank">2025</a>.</li>
       <li>Reviewer for articles in the journal <a href="https://journals.plos.org/plosone/" target="_blank">Plos One</a> and the journal <a href="https://www.tandfonline.com/journals/ucgs20" target="_blank">Journal of Computational and Graphical Statistics</a>.</li>
@@ -490,8 +494,6 @@
 }
 </style>
   <div class="tabsection">
-  <h4>Awards and Other Professional Activities</h4>
-
   <div class="awards-section">
     <ul>
       <li>Scholarship for an industrial doctorate awarded by the Data Lab, The University of Edinburgh and Inbest.ai. <a href="https://www.linkedin.com/posts/andrej-svetlosak_andrej-activity-7315314375941120000-Uh5n?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAA3IiPIBm5DzLy6UH_RNS_2R4DgzA8brrLQ" target="_blank">Link</a>.</li>
