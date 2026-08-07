@@ -1,7 +1,6 @@
 /* --------------------------------------- */
 /* ----- Fonts ----- */
 /* --------------------------------------- */
-
 @font-face {
     font-family: 'Hk Grotesk';
     font-style: normal;
@@ -9,7 +8,6 @@
     src: url('./fonts/HKGrotesk-Regular.woff') format('woff');
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Jost';
     font-style: normal;
@@ -21,20 +19,18 @@
 /* --------------------------------------- */
 /* ----- Basic Setup ----- */
 /* --------------------------------------- */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
 }
-
 :root {
-    --font-size-small: 2.1rem;        /* was 1.8rem */
-    --font-size-normal: 2.4rem;       /* was 2.2rem */
-    --font-size-medium: 3.0rem;       /* was 2.8rem */
-    --font-size-medium-1: 3.8rem;     /* was 3.6rem */
-    --font-size-large: 5.7rem;        /* was 5.5rem */
-    --font-size-huge: 7.7rem;         /* was 7.5rem */
+    --font-size-small: 2.1rem;
+    --font-size-normal: 2.4rem;
+    --font-size-medium: 3.0rem;
+    --font-size-medium-1: 3.8rem;
+    --font-size-large: 5.7rem;
+    --font-size-huge: 7.7rem;
 
     --font-stack: 'Hk Grotesk', sans-serif;
 
@@ -51,27 +47,24 @@
     --container-medium-width: 700px;
     --container-small-width: 500px;
 
-    --gutter-huge: 8rem;          /* was 12rem */
-    --gutter-medium: 4rem;        /* was 6rem */
+    --gutter-huge: 8rem;
+    --gutter-medium: 4rem;
     --gutter-normal: 3rem;
     --gutter-small-1: 2.5rem;
     --gutter-small: 2rem;
 
     --border-light: 1px solid rgb(36, 35, 35);
 }
-
 html {
-    font-size: 82.5%;
+    font-size: 110%; /* larger base font size */
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 @media (max-width: 1000px) {
     html {
-        font-size: 72.5%;
+        font-size: 95%;
     }
 }
-
 body {
     font-size: var(--font-size-small);
     font-family: var(--font-stack);
@@ -81,35 +74,29 @@ body {
     background: var(--black);
     overflow-x: hidden;
 }
-
 .row {
     max-width: var(--container-max-width);
     margin: 0 auto;
 }
-
 @media (max-width: 1340px) {
     .row {
         max-width: 1100px;
     }
 }
-
 @media (max-width: 1240px) {
     .row {
         padding: 0 var(--gutter-medium);
     }
 }
-
 @media (max-width: 600px) {
     .row {
         padding: 0 var(--gutter-small);
     }
 }
-
 section {
-    padding: var(--gutter-medium) 0; /* was var(--gutter-huge) */
+    padding: var(--gutter-medium) 0;
     border-bottom: var(--border-light);
 }
-
 img {
     object-fit: contain;
     max-width: 100%;
@@ -118,7 +105,6 @@ img {
 /* --------------------------------------- */
 /* ----- Headlines and Paragraphs ----- */
 /* --------------------------------------- */
-
 h1,
 h2,
 h3 {
@@ -127,24 +113,20 @@ h3 {
     line-height: var(--line-height-small);
     color: var(--white);
 }
-
 .heading-primary {
     line-height: 1;
     font-size: var(--font-size-huge);
     font-weight: 400;
 }
-
 @media (max-width: 900px) {
     .heading-primary {
         font-size: 6.5rem;
     }
 }
-
 h2 {
     font-size: var(--font-size-large);
     margin-bottom: var(--gutter-medium);
 }
-
 h2::after {
     content: '';
     display: block;
@@ -153,12 +135,10 @@ h2::after {
     background: var(--pink);
     margin: var(--gutter-small) 0;
 }
-
 h3 {
     font-size: var(--font-size-medium-1);
     margin-bottom: var(--gutter-small);
 }
-
 p {
     margin: var(--gutter-small-1) 0;
 }
@@ -168,16 +148,13 @@ p {
         max-width: var(--container-small-width);
     }
 }
-
 @media (max-width: 500px) {
     .heading-primary {
         font-size: var(--font-size-large);
     }
-
     h2 {
         font-size: var(--font-size-medium-1);
     }
-
     h3 {
         font-size: var(--font-size-medium);
     }
@@ -186,7 +163,6 @@ p {
 /* --------------------------------------- */
 /* ----- Buttons and Links ----- */
 /* --------------------------------------- */
-
 a {
     color: var(--white);
     font-weight: 400;
@@ -194,25 +170,20 @@ a {
     transition: all 0.2s;
     outline: 2px solid transparent;
 }
-
 ::-moz-focus-inner {
     border: 0;
 }
-
 button:focus,
 a:focus {
     outline: 2px solid var(--pink);
 }
-
 body:not(.user-is-tabbing) button:focus,
 body:not(.user-is-tabbing) a:focus {
     outline: none;
 }
-
 .link:hover {
     color: var(--pink);
 }
-
 .btn {
     position: relative;
     display: inline-block;
@@ -222,11 +193,9 @@ body:not(.user-is-tabbing) a:focus {
     border: 1px solid var(--pink);
     font-weight: 400;
 }
-
 .btn:focus {
     outline: none;
 }
-
 .btn::after {
     content: '';
     display: block;
@@ -239,27 +208,22 @@ body:not(.user-is-tabbing) a:focus {
     z-index: -1;
     transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
 }
-
 .btn:hover::after,
 .btn:focus::after {
     right: 0;
     background: var(--pink);
 }
-
 .btn--pink {
     background: var(--pink);
     transition: all 0.2s;
 }
-
 .btn--pink::after {
     display: none;
 }
-
 .btn--pink:hover,
 .btn--pink:focus {
     background: transparent;
 }
-
 .link__text {
     position: relative;
     display: inline-block;
@@ -268,7 +232,6 @@ body:not(.user-is-tabbing) a:focus {
     text-decoration: none;
     border-bottom: 1px solid var(--pink);
 }
-
 .link__text::after {
     content: '';
     display: block;
@@ -281,17 +244,14 @@ body:not(.user-is-tabbing) a:focus {
     z-index: -1;
     transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
 }
-
 .link__text:focus {
     outline: none;
 }
-
 .link__text:hover::after,
 .link__text:focus::after {
     right: 0;
     background: var(--pink);
 }
-
 .link__text span {
     padding-left: 1rem;
     font-family: sans-serif;
@@ -300,7 +260,6 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 /* ----- Back to Top ----- */
 /* --------------------------------------- */
-
 .back-to-top {
     position: fixed;
     bottom: 4rem;
@@ -316,17 +275,14 @@ body:not(.user-is-tabbing) a:focus {
     visibility: hidden;
     transition: all 0.4s;
 }
-
 .back-to-top__image {
     height: 70%;
 }
-
 @media (max-width: 900px) {
     .back-to-top {
         right: 2rem;
     }
 }
-
 @media (max-width: 500px) {
     .back-to-top {
         right: 1rem;
@@ -336,22 +292,18 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 /* ----- Navigation ----- */
 /* --------------------------------------- */
-
 .nav {
     display: flex;
     justify-content: flex-end;
     padding: var(--gutter-normal) 0;
 }
-
 .nav__items {
     display: flex;
     list-style: none;
 }
-
 .nav__item:not(:last-child) {
     margin-right: var(--gutter-medium);
 }
-
 .nav__link {
     position: relative;
     display: inline-block;
@@ -360,7 +312,6 @@ body:not(.user-is-tabbing) a:focus {
     color: inherit;
     transition: all 0.2s;
 }
-
 .nav__link::after {
     content: '';
     position: absolute;
@@ -372,7 +323,9 @@ body:not(.user-is-tabbing) a:focus {
     background: var(--white);
     transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
 }
-
+.nav__link:hover {
+    color: var(--pink);
+}
 .nav__link:hover {
     color: var(--pink);
 }
@@ -409,7 +362,6 @@ body:not(.user-is-tabbing) a:focus {
     background:
         linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
         url('./images/architecture2.jpg');
-
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -551,7 +503,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .about__content {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
 }
 
