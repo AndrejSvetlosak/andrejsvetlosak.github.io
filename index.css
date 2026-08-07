@@ -1,797 +1,627 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>
-    Andrej Svetlošák, PhD | Financial AI, Statistical Learning &amp; Data Science
-  </title>
-
-  <meta
-    name="description"
-    content="Andrej Svetlošák, PhD — Data Scientist specialising in Financial AI, Statistical Learning, Explainable AI, Machine Learning, and Open Banking-Type data."
-  >
-
-  <meta
-    name="keywords"
-    content="Andrej Svetlošák, data science, financial AI, statistical learning, explainable AI, machine learning, clustering, open banking, R, Python, large language models"
-  >
-
-  <link rel="stylesheet" href="index.css">
-</head>
-
-<body>
-
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation" aria-label="Main navigation">
-        <ul class="nav__items">
-          <li class="nav__item">
-            <a href="#experience" class="nav__link">Experience</a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#applied-work" class="nav__link">
-              Applied AI &amp; Data Science
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About Me</a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <span>Andrej Svetlošák, PhD</span>
-        </h1>
-
-        <p>
-          Data Scientist specialising in Financial AI, Statistical Learning,
-          Explainable AI, and Machine Learning.<br>
-          Delivering practical data-driven solutions in collaboration with
-          industry and technology partners.
-        </p>
-
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
-      </div>
-    </div>
-  </header>
-
-  <main role="main">
-
-    <!-- =====================================================
-         PROFESSIONAL EXPERIENCE
-         ===================================================== -->
-
-    <section class="work" id="experience">
-      <div class="row">
-        <h2>Professional Experience &amp; Industry Collaboration</h2>
-
-        <div class="work__boxes">
-
-          <div class="work__box work__box--text-only">
-            <div class="work__text">
-              <h3>University of Edinburgh, School of Mathematics</h3>
-
-              <p>
-                <strong>
-                  Research Fellow in Statistical Learning &amp; Financial AI
-                </strong>
-                <br>
-                April 2024 – April 2026 · Edinburgh, Scotland
-              </p>
-
-              <p>
-                Developing practical statistical-learning and AI solutions in
-                collaboration with academic, technology, and a £500 billion
-                asset-management fund.
-              </p>
-
-              <ul class="work__list">
-                <li>
-                  Developing explainable AI and statistical-learning approaches
-                  for financial applications and investment-related use cases.
-                </li>
-
-                <li>
-                  Working in a joint initiative involving the University of
-                  Edinburgh and a £500 billion asset-management fund.
-                </li>
-
-                <li>
-                  Developing practical interfaces between statistical methods,
-                  machine learning, and large language models.
-                </li>
-
-                <li>
-                  Implementing and maintaining analytical software in Python and R.
-                </li>
-
-                <li>
-                  Translating technical work into clear results and recommendations
-                  for multidisciplinary stakeholders.
-                </li>
-
-                <li>
-                  Coordinating designated project components across research and
-                  industry teams.
-                </li>
-              </ul>
-
-              <div class="work__links">
-                <a
-                  href="https://maths.ed.ac.uk/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="link__text"
-                >
-                  University of Edinburgh School of Mathematics
-                  <span>&rarr;</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="work__box work__box--text-only">
-            <div class="work__text">
-              <h3>Open Banking Data Science &amp; Financial Analytics</h3>
-
-              <p>
-                <strong>Doctoral Researcher — University of Edinburgh</strong>
-                <br>
-                September 2017 – December 2023 · Edinburgh, Scotland
-              </p>
-
-              <p>
-                Industrial doctorate focused on developing statistical and
-                machine-learning methods for practical analysis of
-                Open Banking-Type transactional data.
-              </p>
-
-              <ul class="work__list">
-                <li>
-                  Developed methods for financial-data analysis, personal-finance
-                  insights, customer segmentation, and macroeconomic analysis.
-                </li>
-
-                <li>
-                  Worked in a cross-sector collaboration between the University
-                  of Edinburgh, The Data Lab, and financial-technology company
-                  Inbest.ai.
-                </li>
-
-                <li>
-                  Applied nonparametric statistics, clustering, unsupervised
-                  machine learning, and time-series methods.
-                </li>
-
-                <li>
-                  Built analytical approaches for complex and high-dimensional
-                  transaction data.
-                </li>
-
-                <li>
-                  Organised and contributed to events involving industry,
-                  government, academia, and third-sector organisations.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="work__box work__box--text-only">
-            <div class="work__text">
-              <h3>Previous Professional Experience</h3>
-
-              <ul class="work__list">
-                <li>
-                  <strong>
-                    Statistician and Assistant to Studio Director,
-                    Krämer Marktforschung
-                  </strong>
-                  — supported market-research project organisation, reporting,
-                  and operational planning.
-                </li>
-
-                <li>
-                  <strong>Student Assistant, Freie Universität Berlin</strong>
-                  — prepared German Socio-Economic Panel data for statistical
-                  analysis, regression modelling, and reporting.
-                </li>
-
-                <li>
-                  <strong>
-                    Data Mining Tutor, University of Edinburgh Business School
-                  </strong>
-                  — delivered applied R-based data-mining programming exercises
-                  at Master's level.
-                </li>
-
-                <li>
-                  <strong>Economics Tutor, Freie Universität Berlin</strong>
-                  — taught microeconomics, macroeconomics, and introductory
-                  economics tutorials.
-                </li>
-
-                <li>
-                  <strong>
-                    Internship, German–Slovak Industrial Chamber of Commerce
-                  </strong>
-                  — researched companies, supported bilateral business
-                  communication, and organised meetings.
-                </li>
-
-                <li>
-                  <strong>Internship, Via Iuris</strong>
-                  — maintained an NGO database focused on judicial, human-rights,
-                  civil-rights, and environmental issues.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================
-         APPLIED AI / DATA SCIENCE / SELECTED WORK
-         ===================================================== -->
-
-    <section class="work" id="applied-work">
-      <div class="row">
-        <h2>Applied AI, Data Science &amp; Selected Work</h2>
-
-        <div class="work__boxes">
-
-          <div class="work__box work__box--text-only">
-            <div class="work__text">
-              <h3>
-                Statistical Learning, Financial AI and their Interface
-                with Large Language Models
-              </h3>
-
-              <p>
-                Developing practical approaches at the intersection of
-                statistical learning, interpretable machine learning,
-                financial AI, and large language models.
-              </p>
-
-              <ul class="work__list">
-                <li>
-                  Developing statistical and explainable-AI methodology for
-                  financial and investment-related applications.
-                </li>
-
-                <li>
-                  Investigating practical interfaces between statistical
-                  intelligence and large language models.
-                </li>
-
-                <li>
-                  Designing and implementing methods in Python and R.
-                </li>
-
-                <li>
-                  Supporting data-driven decision making through transparent,
-                  interpretable, and robust analytical methods.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="work__box work__box--text-only">
-            <div class="work__text">
-              <h3>Statistical Learning for Open Banking-Type Data</h3>
-
-              <p>
-                Developed new statistical learning methods for analysing
-                transaction data, personal finance, market segmentation, and
-                macroeconomic topics.
-              </p>
-
-              <ul class="work__list">
-                <li>
-                  Developed nonparametric methods for personal-finance analysis.
-                </li>
-
-                <li>
-                  Developed unsupervised learning methods for quantitative
-                  market segmentation.
-                </li>
-
-                <li>
-                  Worked with Open Banking-Type transactional data in
-                  collaboration with academia, public institutions, and industry.
-                </li>
-
-                <li>
-                  Applied clustering, smooth predictors for time series, and
-                  flexible statistical-learning methods.
-                </li>
-              </ul>
-
-              <div class="work__links">
-                <a
-                  href="https://era.ed.ac.uk/items/46c6d4aa-2598-4aed-a707-175b7d08cd68"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="link__text"
-                >
-                  View thesis webpage <span>&rarr;</span>
-                </a>
-
-                <a
-                  href="./assets/SvetlosakA_2024.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="link__text"
-                >
-                  Read thesis PDF <span>&rarr;</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>
-                A Game-Inspired Algorithm for Marginal and Global Clustering
-              </h3>
-
-              <p>
-                de Carvalho, M., Martos, G., and Svetlošák, A. (2025).
-                <em>Pattern Recognition.</em>
-              </p>
-
-              <ul class="work__list">
-                <li>
-                  Introduces a game-inspired algorithm for marginal and global
-                  clustering.
-                </li>
-
-                <li>
-                  Research with applications in unsupervised machine learning,
-                  segmentation, and data exploration.
-                </li>
-              </ul>
-
-              <div class="work__links">
-                <a
-                  href="https://www.sciencedirect.com/science/article/pii/S0031320324009099"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="link__text"
-                >
-                  View publication webpage <span>&rarr;</span>
-                </a>
-
-                <a
-                  href="./assets/A-Game-Inspired-Algorithm-for-Marginal-and-Global-Clustering.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="link__text"
-                >
-                  Read publication PDF <span>&rarr;</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="work__image-box">
-              <img
-                src="./images/RC_Example.jpg"
-                class="work__image"
-                alt="Illustration of the Reign and Conquer clustering algorithm"
-              >
-            </div>
-          </div>
-
-          <div class="work__box work__box--text-only">
-            <div class="work__text">
-              <h3>
-                Novel Statistical Learning Approaches for Open Banking-Type Data
-              </h3>
-
-              <p>
-                Andrej Svetlošák (2024). Doctoral thesis,
-                University of Edinburgh.
-              </p>
-
-              <ul class="work__list">
-                <li>
-                  Develops statistical learning approaches for Open Banking-Type
-                  transactional data.
-                </li>
-
-                <li>
-                  Focuses on nonparametric statistics, clustering, unsupervised
-                  learning, and quantitative market segmentation.
-                </li>
-
-                <li>
-                  Applies methods to personal-finance, microeconomic, and
-                  macroeconomic topics.
-                </li>
-              </ul>
-
-              <div class="work__links">
-                <a
-                  href="https://era.ed.ac.uk/items/46c6d4aa-2598-4aed-a707-175b7d08cd68"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="link__text"
-                >
-                  View thesis webpage <span>&rarr;</span>
-                </a>
-
-                <a
-                  href="./assets/SvetlosakA_2024.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="link__text"
-                >
-                  Read thesis PDF <span>&rarr;</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>
-                Subject-to-Group Statistical Comparison for
-                Open Banking-Type Data
-              </h3>
-
-              <p>
-                Svetlošák, A., de Carvalho, M., and Calabrese, R. (2021).
-                <em>Journal of the Operational Research Society.</em>
-              </p>
-
-              <ul class="work__list">
-                <li>
-                  Presents a statistical approach for subject-to-group comparison
-                  using Open Banking-Type data.
-                </li>
-
-                <li>
-                  Applies nonparametric statistical methods to transactional
-                  financial data.
-                </li>
-
-                <li>
-                  Introduces covariate truncated regression centred at a
-                  reference point. This is used to analyse individual subject
-                  behaviour in comparison to a group of peers.
-                </li>
-              </ul>
-
-              <div class="work__links">
-                <a
-                  href="https://www.tandfonline.com/doi/full/10.1080/01605682.2021.1952115"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="link__text"
-                >
-                  View publication webpage <span>&rarr;</span>
-                </a>
-
-                <a
-                  href="./assets/Subject-to-Group-Statistical-Comparison.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="link__text"
-                >
-                  Read publication PDF <span>&rarr;</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="work__image-box">
-              <img
-                src="./images/CMV.jpg"
-                class="work__image"
-                alt="Comparative Mean Value methodology and Monte Carlo simulation"
-              >
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Professional and Academic Activities</h3>
-
-              <p>
-                Contributions to the data-science and statistical-learning
-                community through talks, industry engagement, reviewing,
-                seminar organisation, and event coordination.
-              </p>
-
-              <ul class="work__list">
-                <li>
-                  Invited speaker at Digital Transformation and Digital Economics:
-                  Principles and Practice (DXDE), 2024.
-                </li>
-
-                <li>
-                  Speaker at the International Federation of Classification
-                  Societies conference, 2022.
-                </li>
-
-                <li>
-                  Presenter at ERCIM Computational and Methodological Statistics
-                  conferences.
-                </li>
-
-                <li>
-                  Session chair at the University of Edinburgh Centre for
-                  Statistics Annual Conference.
-                </li>
-
-                <li>
-                  Reviewer for PLOS ONE and the Journal of Computational and
-                  Graphical Statistics.
-                </li>
-
-                <li>
-                  Co-organiser of Statistics Seminars at the University of
-                  Edinburgh.
-                </li>
-              </ul>
-            </div>
-
-            <div class="work__image-box">
-              <img
-                src="./images/DXDE_2024.jpg"
-                class="work__image"
-                alt="Academic conference or research event"
-              >
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================
-         ABOUT
-         ===================================================== -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-
-        <div class="about__content">
-          <div class="about__text">
-            <p>
-              I am a data scientist specialising in financial AI, statistical
-              learning, explainable AI, machine learning, and analysis of
-              complex financial and transactional data. I work on turning
-              advanced statistical and AI methods into practical tools,
-              systems, and insights for real-world decision making.
-              <br><br>
-
-              My experience includes industry-oriented work in asset management,
-              financial AI, Open Banking-Type data, market research, and applied
-              analytics. I am particularly interested in projects where complex
-              data, machine learning, and business or financial decisions meet.
-              <br><br>
-
-              I have worked closely with industry partners, government-linked
-              innovation organisations, and multidisciplinary teams. My work
-              includes methodology development, software implementation in R and
-              Python, analysis of complex datasets, and communicating technical
-              findings clearly to non-technical stakeholders.
-              <br><br>
-
-              I hold a PhD in Statistics from the University of Edinburgh.
-              I work primarily with R and Python and speak fluent Slovak, English,
-              and German.
-            </p>
-
-            <a
-              href="./assets/CV_Andrej_Svetlosak.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn"
-            >
-              View My CV
-            </a>
-          </div>
-
-          <div class="about__photo-container">
-            <img
-              class="about__photo"
-              src="./images/profile.jpg"
-              alt="Portrait of Andrej Svetlošák"
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================
-         EDUCATION / SKILLS / AWARDS
-         ===================================================== -->
-
-    <section class="work" id="education">
-      <div class="row">
-        <h2>Education, Skills &amp; Awards</h2>
-
-        <div class="work__boxes">
-
-          <div class="work__box work__box--text-only">
-            <div class="work__text">
-              <h3>Education</h3>
-
-              <ul class="work__list">
-                <li>
-                  <strong>PhD in Statistics</strong> —
-                  University of Edinburgh, School of Mathematics and Business
-                  School, 2017–2023.
-                  <br>
-                  Thesis:
-                  <em>
-                    Novel Statistical Learning Approaches for Open Banking-Type Data.
-                  </em>
-                </li>
-
-                <li>
-                  <strong>BSc in Economics, Grade 1.6</strong> —
-                  Freie Universität Berlin, 2010–2013.
-                </li>
-
-                <li>
-                  <strong>High School Diploma</strong> —
-                  Gymnasium Jána Papánka, Bratislava, Slovakia.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="work__box work__box--text-only">
-            <div class="work__text">
-              <h3>Technical Skills</h3>
-
-              <ul class="work__list">
-                <li>
-                  <strong>R:</strong> nonparametric algorithms, unsupervised
-                  learning, R Shiny, and ggplot.
-                </li>
-
-                <li>
-                  <strong>Python:</strong> machine learning, AI, language
-                  models, statistical software, Dash, and Plotly.
-                </li>
-
-                <li>
-                  <strong>Other software:</strong> Git, SQL, LaTeX, and
-                  Microsoft Office.
-                </li>
-
-                <li>
-                  <strong>Languages:</strong> Slovak (native), English
-                  (native level), and German (native level).
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="work__box work__box--text-only">
-            <div class="work__text">
-              <h3>Selection of Awards &amp; Scholarships</h3>
-
-              <ul class="work__list">
-                <li>
-                  Industrial doctorate scholarship from The Data Lab, the
-                  University of Edinburgh, and Inbest.ai.
-                </li>
-
-                <li>
-                  DAAD scholarship for university studies in Germany.
-                </li>
-
-                <li>
-                  DAAD Prize for best foreign student and best in class in
-                  Economics.
-                </li>
-
-                <li>
-                  Teaching award from the School of Economics and Business,
-                  Freie Universität Berlin.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- =====================================================
-       CONTACT
-       ===================================================== -->
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-
-      <div class="contact__info">
-        <p>
-          If you are looking to harness data, machine learning, or AI to
-          generate insights and support decision making, I would be pleased
-          to hear from you. I am interested in practical collaborations in
-          financial AI, data science, statistical learning, explainable AI,
-          Open Banking-Type data, and machine learning.
-        </p>
-
-        <a href="mailto:andrejsvetlosak@gmail.com" class="btn">
-          Email Me
-        </a>
-
-        <br><br>
-
-        <p>
-          Email:
-          <a href="mailto:andrejsvetlosak@gmail.com">
-            andrejsvetlosak@gmail.com
-          </a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================
-       FOOTER
-       ===================================================== -->
-
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a
-            href="https://www.linkedin.com/in/andrej-svetlosak/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Visit Andrej Svetlošák's LinkedIn profile"
-          >
-            <img
-              src="./images/linkedin.svg"
-              class="footer__social-image"
-              alt="LinkedIn"
-            >
-          </a>
-        </li>
-      </ul>
-
-      <p>
-        &copy; 2026 Andrej Svetlošák, PhD.
-      </p>
-    </div>
-  </footer>
-
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img
-      src="./images/arrow-up.svg"
-      alt="Back to top"
-      class="back-to-top__image"
-    >
-  </a>
-
-  <script src="./index.js"></script>
-
-</body>
-</html>
-```
+/* --------------------------------------- */
+/* ----- Fonts ----- */
+/* --------------------------------------- */
+
+@font-face {
+    font-family: 'Hk Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/HKGrotesk-Regular.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Jost-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+/* --------------------------------------- */
+/* ----- Basic Setup ----- */
+/* --------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --font-size-small: 1.8rem;
+    --font-size-normal: 2.2rem;
+    --font-size-medium: 2.8rem;
+    --font-size-medium-1: 3.6rem;
+    --font-size-large: 5.5rem;
+    --font-size-huge: 7.5rem;
+
+    --font-stack: 'Hk Grotesk', sans-serif;
+
+    --line-height-normal: 1.7;
+    --line-height-small: 1.2;
+
+    --black: #000;
+    --pink: #ff3258;
+    --white: #f0e9f2;
+    --white-1: #e5e5e6da;
+
+    --container-max-width: 1180px;
+    --container-normal-width: 800px;
+    --container-medium-width: 700px;
+    --container-small-width: 500px;
+
+    --gutter-huge: 12rem;
+    --gutter-medium: 6rem;
+    --gutter-normal: 3rem;
+    --gutter-small-1: 2.5rem;
+    --gutter-small: 2rem;
+
+    --border-light: 1px solid rgb(36, 35, 35);
+}
+
+html {
+    font-size: 82.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 72.5%;
+    }
+}
+
+body {
+    font-size: var(--font-size-small);
+    font-family: var(--font-stack);
+    font-weight: 400;
+    color: var(--white-1);
+    line-height: var(--line-height-normal);
+    background: var(--black);
+    overflow-x: hidden;
+}
+
+.row {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+}
+
+@media (max-width: 1340px) {
+    .row {
+        max-width: 1100px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .row {
+        padding: 0 var(--gutter-medium);
+    }
+}
+
+@media (max-width: 600px) {
+    .row {
+        padding: 0 var(--gutter-small);
+    }
+}
+
+section {
+    padding: var(--gutter-huge) 0;
+    border-bottom: var(--border-light);
+}
+
+img {
+    object-fit: contain;
+    max-width: 100%;
+}
+
+/* --------------------------------------- */
+/* ----- Headlines and Paragraphs ----- */
+/* --------------------------------------- */
+
+h1,
+h2,
+h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    line-height: var(--line-height-small);
+    color: var(--white);
+}
+
+.heading-primary {
+    line-height: 1;
+    font-size: var(--font-size-huge);
+    font-weight: 400;
+}
+
+@media (max-width: 900px) {
+    .heading-primary {
+        font-size: 6.5rem;
+    }
+}
+
+h2 {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--gutter-medium);
+}
+
+h2::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 10rem;
+    background: var(--pink);
+    margin: var(--gutter-small) 0;
+}
+
+h3 {
+    font-size: var(--font-size-medium-1);
+    margin-bottom: var(--gutter-small);
+}
+
+p {
+    margin: var(--gutter-small-1) 0;
+}
+
+@media (max-width: 900px) {
+    p {
+        max-width: var(--container-small-width);
+    }
+}
+
+@media (max-width: 500px) {
+    .heading-primary {
+        font-size: var(--font-size-large);
+    }
+
+    h2 {
+        font-size: var(--font-size-medium-1);
+    }
+
+    h3 {
+        font-size: var(--font-size-medium);
+    }
+}
+
+/* --------------------------------------- */
+/* ----- Buttons and Links ----- */
+/* --------------------------------------- */
+
+a {
+    color: var(--white);
+    font-weight: 400;
+    font-family: 'Jost', sans-serif;
+    transition: all 0.2s;
+    outline: 2px solid transparent;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}
+
+button:focus,
+a:focus {
+    outline: 2px solid var(--pink);
+}
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) a:focus {
+    outline: none;
+}
+
+.link:hover {
+    color: var(--pink);
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4.2rem;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--pink);
+    font-weight: 400;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    background: var(--white);
+    height: 100%;
+    z-index: -1;
+    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+
+.btn:hover::after,
+.btn:focus::after {
+    right: 0;
+    background: var(--pink);
+}
+
+.btn--pink {
+    background: var(--pink);
+    transition: all 0.2s;
+}
+
+.btn--pink::after {
+    display: none;
+}
+
+.btn--pink:hover,
+.btn--pink:focus {
+    background: transparent;
+}
+
+.link__text {
+    position: relative;
+    display: inline-block;
+    padding: 0.6rem;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--pink);
+}
+
+.link__text::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    background: var(--white);
+    height: 100%;
+    z-index: -1;
+    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+
+.link__text:focus {
+    outline: none;
+}
+
+.link__text:hover::after,
+.link__text:focus::after {
+    right: 0;
+    background: var(--pink);
+}
+
+.link__text span {
+    padding-left: 1rem;
+    font-family: sans-serif;
+}
+
+/* --------------------------------------- */
+/* ----- Back to Top ----- */
+/* --------------------------------------- */
+
+.back-to-top {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.5rem;
+    width: 5.5rem;
+    background-color: var(--pink);
+    border-radius: 50%;
+    z-index: 10;
+    visibility: hidden;
+    transition: all 0.4s;
+}
+
+.back-to-top__image {
+    height: 70%;
+}
+
+@media (max-width: 900px) {
+    .back-to-top {
+        right: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .back-to-top {
+        right: 1rem;
+    }
+}
+
+/* --------------------------------------- */
+/* ----- Navigation ----- */
+/* --------------------------------------- */
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: var(--gutter-normal) 0;
+}
+
+.nav__items {
+    display: flex;
+    list-style: none;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: var(--gutter-medium);
+}
+
+.nav__link {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    display: inline-block;
+    height: 1rem;
+    background: var(--white);
+    transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+
+.nav__link:hover {
+    color: var(--pink);
+}
+
+.nav__link:hover::after {
+    right: 0;
+    height: 2px;
+    background: var(--pink);
+}
+
+@media (max-width: 500px) {
+    .nav {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav__item:not(:last-child) {
+        margin-right: var(--gutter-normal);
+    }
+}
+
+@media (max-width: 300px) {
+    .nav {
+        font-size: var(--font-size-small);
+    }
+}
+
+/* --------------------------------------- */
+/* ----- Header ----- */
+/* --------------------------------------- */
+
+.header {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
+        url('./images/architecture2.jpg');
+
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: var(--font-size-normal);
+}
+
+.header__text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__text p {
+    margin: 1.5rem 0 3.5rem;
+    max-width: var(--container-medium-width);
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-medium);
+}
+
+@media (max-width: 500px) {
+    .header {
+        text-align: center;
+    }
+
+    .header__text p {
+        transform: scale(0.8);
+    }
+}
+
+/* --------------------------------------- */
+/* ----- Work / Experience / Projects ----- */
+/* --------------------------------------- */
+
+.work__box {
+    display: flex;
+    align-items: center;
+}
+
+.work__box:not(:last-child) {
+    margin-bottom: 25rem;
+}
+
+.work__text {
+    flex: 0 0 30%;
+}
+
+/*
+   Add class="work__box work__box--text-only"
+   to every work box without a work__image-box.
+*/
+.work__box--text-only .work__text {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    grid-column: 1 / -1;
+}
+
+.work__links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.work__list {
+    list-style-position: inside;
+    margin-bottom: var(--gutter-normal);
+}
+
+.work__code {
+    display: block;
+    height: 3rem;
+    margin-left: var(--gutter-normal);
+    transition: all 0.3s;
+}
+
+.work__code:hover {
+    transform: scale(1.2);
+}
+
+.work__image-box {
+    margin-bottom: var(--gutter-normal);
+}
+
+@media (min-width: 901px) {
+    .work__image-box {
+        flex: 1;
+        margin: 0 0 0 10rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .work__box {
+        align-items: initial;
+        flex-direction: column-reverse;
+    }
+
+    .work__code {
+        height: 4rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .work__box:not(:last-child) {
+        margin-bottom: 20rem;
+    }
+}
+
+/* --------------------------------------- */
+/* ----- Clients ----- */
+/* --------------------------------------- */
+
+.client__logos {
+    display: flex;
+    justify-content: space-between;
+    filter: invert(100%) grayscale(100%) opacity(0.8);
+}
+
+.client__logo {
+    height: 6.5rem;
+    max-width: 18rem;
+}
+
+@media (max-width: 1240px) {
+    .client__logos {
+        overflow-x: scroll;
+        padding: var(--gutter-normal);
+    }
+
+    .client__logo:not(:last-of-type) {
+        margin-right: var(--gutter-medium);
+    }
+}
+
+/* --------------------------------------- */
+/* ----- About ----- */
+/* --------------------------------------- */
+
+.about__content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.about__photo-container {
+    margin-bottom: var(--gutter-normal);
+}
+
+@media (min-width: 901px) {
+    .about__text {
+        flex: 0 0 35%;
+    }
+
+    .about__photo-container {
+        flex: 1;
+        margin: 0 var(--gutter-huge) 0 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .about__content {
+        flex-direction: column-reverse;
+        align-items: initial;
+    }
+}
+
+/* --------------------------------------- */
+/* ----- Contact ----- */
+/* --------------------------------------- */
+
+.contact__info {
+    max-width: var(--container-medium-width);
+}
+
+/* --------------------------------------- */
+/* ----- Footer ----- */
+/* --------------------------------------- */
+
+.footer {
+    text-align: center;
+    padding: var(--gutter-medium) 0 var(--gutter-normal);
+}
+
+.footer__social-links {
+    display: flex;
+    justify-content: center;
+    padding: var(--gutter-normal) 0;
+    list-style: none;
+}
+
+.footer__social-link-item:not(:last-of-type) {
+    margin-right: var(--gutter-small);
+}
+
+.footer__social-image {
+    height: 4rem;
+}
+
+.footer__github-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__github-buttons iframe {
+    height: 2.5rem;
+    width: 84px;
+    transform: translateY(3px);
+}
+
+@media (max-width: 500px) {
+    .footer {
+        padding: var(--gutter-medium) 0;
+    }
+}
