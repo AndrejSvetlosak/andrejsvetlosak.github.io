@@ -6,150 +6,36 @@
   <title>Andrej Svetlošák, PhD | Financial AI, Statistical Learning &amp; Data Science</title>
   <meta name="description" content="Andrej Svetlošák, PhD — Data Scientist specialising in Financial AI, Statistical Learning, Explainable AI, Machine Learning, and Open Banking-Type data.">
   <meta name="keywords" content="Andrej Svetlošák, data science, financial AI, statistical learning, explainable AI, machine learning, clustering, open banking, R, Python, large language models"/>
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Jost:400,500&display=swap');
-    html { font-size: 20px; box-sizing: border-box; scroll-behavior:smooth; }
-    *, *:before, *:after { box-sizing: inherit; }
-    :root {
-      --font-size-base: 1rem;
-      --font-size-nav: 1.22rem;
-      --font-size-h2: 2rem;
-      --font-size-h3: 1.3rem;
-      --font-size-huge: 2.5rem;
-      --font-stack: Arial, sans-serif;
-      --font-head: 'Jost', Arial, sans-serif;
-      --container-max-width: 1120px;
-      --gutter: 2rem;
-      --black: #000;
-      --pink: #ff3258;
-      --white: #f0e9f2;
-      --white-1: #e5e5e6da;
-      --border-light: 1px solid rgb(36,35,35);
-    }
-    body {
-      font-size: var(--font-size-base);
-      font-family: var(--font-stack);
-      background: var(--black);
-      color: var(--white-1);
-      line-height: 1.7;
-      margin: 0;
-    }
-    .row { max-width: var(--container-max-width); margin: 0 auto; padding: 0 var(--gutter);}
-    section { padding: 2.2rem 0 2rem 0; border-bottom: var(--border-light);}
-    h1,h2,h3 {font-family:var(--font-head);font-weight:400;color:var(--white);}
-    .heading-primary {font-size:var(--font-size-huge);margin:1.2rem 0 2rem 0;line-height:1;}
-    h2 {font-size:var(--font-size-h2);margin:1.1em 0 1.1em 0;}
-    h2::after {content:"";display:block;width:7rem;height:2px;background:var(--pink);}
-    h3 {font-size:var(--font-size-h3);margin-bottom:.7rem;}
-    p {margin: 0 0 0.8rem 0;}
-    /* Navigation bar */
-    .nav {
-      background: rgba(0,0,0,0.97); position: sticky; top: 0; z-index: 1010;
-      display:flex; justify-content:center; align-items:center; min-height:3.4rem;
-    }
-    .nav__items {display:flex;gap:1.6rem;}
-    .nav__link {
-      color: var(--white); text-decoration:none; font-size:var(--font-size-nav);
-      font-family:var(--font-head); font-weight:500;
-      padding:1.0rem 0.3rem 0.7rem 0.3rem; transition:color 0.18s; position:relative;
-    }
-    .nav__link::after {
-      content:'';display:block;position:absolute;left:0;right:100%;bottom:0;height:2.5px;
-      background:var(--white);transition:all 0.25s cubic-bezier(1,0.68,0.16,0.9);
-    }
-    .nav__link:hover, .nav__link:focus { color: var(--pink);}
-    .nav__link:hover::after, .nav__link:focus::after { right: 0; background: var(--pink);}
-    @media (max-width:700px){.nav__items{gap:.8rem;}}
-    @media (max-width:540px){.nav__items{flex-direction:column;gap:.6rem;}.nav__link{font-size:.95rem;}}
-    /* Header w/ hero background */
-    .header {
-      background:linear-gradient(rgba(0,0,0,0.23),rgba(0,0,0,0.33)),url('./images/architecture2.jpg');
-      background-size:cover;background-position:center;background-attachment:fixed;
-      min-height: 90vh; position: relative;
-    }
-    .header__text-box { display:flex;align-items:center;height:71vh;min-height:370px;}
-    .header__text {
-      background: rgba(0,0,0,0.12); padding:2.2rem 2rem 1.1rem 1.2rem; border-radius:1.06em;
-      max-width: 640px;
-      position: absolute;
-      top: 50%;
-      left: var(--gutter);
-      transform: translateY(-50%);
-    }
-    @media (max-width:700px){.header__text-box{height:39vh;}.header__text{max-width:100%;left:8%;right:8%;}}
-    /* Work/About -- images on right desktop */
-    .work__box, .about__content {display:flex;flex-direction:row;gap:1.8rem;align-items:flex-start;margin-bottom:2.5rem;}
-    .work__image-box, .about__photo-container {flex:0 0 380px;max-width:380px;align-items:flex-end;}
-    .work__image, .about__photo {width:100%;max-width:380px;min-width:180px;border-radius:1.08em;margin-bottom:0.6rem;box-shadow:0 2px 18px 0 rgba(66,66,100,0.12);background: #181818;}
-    .work__box--text-only, .work__box--text-only .work__text {max-width:100%;}
-    @media (max-width:900px){.work__box,.about__content{flex-direction:column;}.work__image-box,.about__photo-container{max-width:100%;}}
-    /* Buttons/Links */
-    .btn {
-      display:inline-block;font-size:1.05rem;border:1.2px solid var(--pink);background:var(--pink);color:var(--white);
-      padding:.57em 2em;border-radius:2em;font-family:var(--font-head);font-weight:500;
-      text-decoration:none;transition:background 0.2s,color 0.2s;margin:.9em 0 .7em 0;
-    }
-    .btn:hover, .btn:focus{background:var(--white);color:var(--pink);}
-    .btn--pink{background:var(--pink);}
-    .link__text {
-      position:relative;display:inline-block;padding:0.35rem 0.12rem 0.30rem 0.12rem;
-      color:inherit;text-decoration:none;border-bottom:2px solid var(--pink);font-weight:500;transition:color 0.2s,border-color 0.2s;}
-    .link__text:hover,.link__text:focus{color:var(--pink);border-bottom:2px solid var(--white);}
-    .link__text span{padding-left:0.7em;}
-    /* Misc sections */
-    .work__list { margin-bottom: 1.2rem; }
-    .footer {
-      text-align: center;
-      padding: 2.4rem 0 1.5rem 0;
-    }
-    .footer__social-links {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      margin-bottom: 0.8em;
-      gap: 1rem;
-    }
-    .footer__social-image { height:2.2rem;}
-    .back-to-top {
-      position:fixed;bottom:2rem;right:2rem;display:flex;justify-content:center;align-items:center;
-      height:3rem;width:3rem;background-color:var(--pink);border-radius:50%;z-index:1999;opacity:0.93;cursor:pointer;
-      transition:box-shadow 0.24s;box-shadow:0 2px 8px rgba(0,0,0,0.14);}
-    .back-to-top__image {height:54%;width:54%;}
-    @media (max-width: 600px) {.row { padding: 0 0.7rem;}}
-        .contact__info {width:100%;display:flex;flex-direction:column;align-items:flex-start;margin-bottom:1rem;}
-    .contact__info p, .contact__info .btn { text-align: left; }
-  </style>
+  <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
   <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation" aria-label="Main navigation">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="row">
         <ul class="nav__items">
           <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
-          <li class="nav__item"><a href="#applied-work" class="nav__link">Applied AI &amp; Data Science</a></li>
+          <li class="nav__item"><a href="#research" class="nav__link">Research &amp; Publications</a></li>
           <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
           <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
-      </nav>
-    </div>
-    <div class="header__text-box row">
+      </div>
+    </nav>
+    <div class="header__center">
       <div class="header__text">
-        <h1 class="heading-primary"><span>Andrej Svetlošák, PhD</span></h1>
+        <h1 class="heading-primary">
+          <span>Andrej Svetlošák, PhD</span>
+        </h1>
         <p>
-          Data Scientist specialising in Financial AI, Statistical Learning,
-          Explainable AI, and Machine Learning.<br>
-          Delivering practical data-driven solutions in collaboration with
-          industry and technology partners.
+          Data Scientist specialising in Financial AI, Statistical Learning, Explainable AI, and Machine Learning.<br>
+          Delivering practical data-driven solutions in collaboration with industry and technology partners.
         </p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
     </div>
   </header>
 
-  <main role="main">
-    <!-- Replace this with all your 'work__box' + about + education + awards sections as built above -->
-    <!-- For demo, a minimum example: -->
+  <main>
     <section class="work" id="experience">
       <div class="row">
         <h2>Professional Experience &amp; Industry Collaboration</h2>
@@ -161,18 +47,12 @@
                 <strong>Research Fellow in Statistical Learning &amp; Financial AI</strong><br>
                 April 2024 – April 2026 · Edinburgh, Scotland
               </p>
-              <p>
-                Developing practical statistical-learning and AI solutions in
-                collaboration with academic, technology, and a £500 billion
-                asset-management fund.
-              </p>
               <ul class="work__list">
-                <li>Developing explainable AI and statistical-learning approaches for financial applications and investment-related use cases.</li>
-                <li>Working in a joint initiative involving the University of Edinburgh and a £500 billion asset-management fund.</li>
-                <li>Developing practical interfaces between statistical methods, machine learning, and large language models.</li>
+                <li>Developing explainable AI and statistical-learning approaches
+                  for financial applications and investment-related use cases.</li>
+                <li>Working in a joint initiative involving the University of Edinburgh and a &pound;500 billion asset-management fund.</li>
                 <li>Implementing and maintaining analytical software in Python and R.</li>
-                <li>Translating technical work into clear results and recommendations for multidisciplinary stakeholders.</li>
-                <li>Coordinating designated project components across research and industry teams.</li>
+                <li>Coordinating project components across research and industry teams.</li>
               </ul>
               <div class="work__links">
                 <a href="https://maths.ed.ac.uk/" target="_blank" rel="noopener noreferrer" class="link__text">
@@ -181,28 +61,87 @@
               </div>
             </div>
           </div>
-          <!-- Add more work__box blocks here … -->
+          <!-- Add more experience entries here -->
         </div>
       </div>
     </section>
+
+    <!-- RESEARCH AND PUBLICATIONS (NEW SECTION) -->
+    <section class="work" id="research">
+      <div class="row">
+        <h2>Selected Research &amp; Publications</h2>
+        <div class="work__boxes">
+          <div class="work__box">
+            <div class="work__text">
+              <h3>
+                Subject-to-Group Statistical Comparison for Open Banking-Type Data
+              </h3>
+              <p>
+                Svetlošák, A., de Carvalho, M., and Calabrese, R. (2021).
+                <em>Journal of the Operational Research Society.</em>
+              </p>
+              <ul class="work__list">
+                <li>Presents a statistical approach for subject-to-group comparison using Open Banking-Type data.</li>
+                <li>Nonparametric statistics for transactional financial data.</li>
+              </ul>
+              <div class="work__links">
+                <a href="https://www.tandfonline.com/doi/full/10.1080/01605682.2021.1952115" target="_blank" rel="noopener noreferrer" class="link__text">View publication webpage <span>&rarr;</span></a>
+                <a href="./assets/Subject-to-Group-Statistical-Comparison.pdf" target="_blank" rel="noopener noreferrer" class="link__text">Read publication PDF <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/CMV.jpg" class="work__image" alt="Comparative Mean Value methodology and Monte Carlo simulation" style="margin-bottom:2rem;">
+              <img src="./images/CMV_Users.png" class="work__image" alt="User distribution for Subject-to-Group Comparative Mean Value">
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>
+                A Game-Inspired Algorithm for Marginal and Global Clustering
+              </h3>
+              <p>
+                de Carvalho, M., Martos, G., and Svetlošák, A. (2025).
+                <em>Pattern Recognition.</em>
+              </p>
+              <div class="work__links">
+                <a href="https://www.sciencedirect.com/science/article/pii/S0031320324009099" target="_blank" rel="noopener noreferrer" class="link__text">
+                  View publication webpage <span>&rarr;</span>
+                </a>
+                <a href="./assets/A-Game-Inspired-Algorithm-for-Marginal-and-Global-Clustering.pdf" target="_blank" rel="noopener noreferrer" class="link__text">
+                  Read publication PDF <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/RC_Example.jpg" class="work__image" alt="Reign and Conquer clustering algorithm">
+            </div>
+          </div>
+          <!-- Add more publications as needed -->
+        </div>
+      </div>
+    </section>
+
     <section class="about" id="about">
       <div class="row">
         <h2>About Me</h2>
         <div class="about__content">
           <div class="about__text">
             <p>
-              I am a data scientist specialising in financial AI, statistical learning, explainable AI, machine learning, and analysis of
-              complex financial and transactional data. I work on turning advanced statistical and AI methods into practical tools,
-              systems, and insights for real-world decision making.
+              I am a data scientist specialising in financial AI, statistical
+              learning, explainable AI, machine learning, and analysis of
+              complex financial and transactional data. <br><br>
+              I hold a PhD in Statistics from the University of Edinburgh and have experience working closely with industry partners, government-linked innovation organisations, and multidisciplinary teams.
             </p>
             <a href="./assets/CV_Andrej_Svetlosak.pdf" target="_blank" rel="noopener noreferrer" class="btn">View My CV</a>
           </div>
           <div class="about__photo-container">
-            <img class="about__photo" src="./images/profile.jpg" alt="Portrait of Andrej Svetlošák">
+            <img class="about__photo" src="./images/profile.jpg" alt="Portrait of Andrej Svetlošák" />
           </div>
         </div>
       </div>
     </section>
+
     <section class="work" id="education">
       <div class="row">
         <h2>Education, Skills &amp; Awards</h2>
@@ -211,11 +150,18 @@
             <div class="work__text">
               <h3>Education</h3>
               <ul class="work__list">
-                <li><strong>PhD in Statistics</strong> — University of Edinburgh, School of Mathematics and Business School, 2017–2023.<br>
+                <li>
+                  <strong>PhD in Statistics</strong> —
+                  University of Edinburgh, School of Mathematics and Business School, 2017–2023.<br>
                   Thesis: <em>Novel Statistical Learning Approaches for Open Banking-Type Data.</em>
                 </li>
-                <li><strong>BSc in Economics, Grade 1.6</strong> — Freie Universität Berlin, 2010–2013.</li>
-                <li><strong>High School Diploma</strong> — Gymnasium Jána Papánka, Bratislava, Slovakia.</li>
+                <li>
+                  <strong>BSc in Economics, Grade 1.6</strong> — Freie Universität Berlin, 2010–2013.
+                </li>
+                <li>
+                  <strong>High School Diploma</strong> —
+                  Gymnasium Jána Papánka, Bratislava, Slovakia.
+                </li>
               </ul>
             </div>
           </div>
@@ -223,10 +169,18 @@
             <div class="work__text">
               <h3>Technical Skills</h3>
               <ul class="work__list">
-                <li><strong>R:</strong> nonparametric algorithms, unsupervised learning, R Shiny, and ggplot.</li>
-                <li><strong>Python:</strong> machine learning, AI, language models, statistical software, Dash, and Plotly.</li>
-                <li><strong>Other software:</strong> Git, SQL, LaTeX, and Microsoft Office.</li>
-                <li><strong>Languages:</strong> Slovak (native), English (native level), and German (native level).</li>
+                <li>
+                  <strong>R:</strong> nonparametric algorithms, unsupervised learning, R Shiny, and ggplot.
+                </li>
+                <li>
+                  <strong>Python:</strong> machine learning, AI, language models, statistical software, Dash, and Plotly.
+                </li>
+                <li>
+                  <strong>Other software:</strong> Git, SQL, LaTeX, and Microsoft Office.
+                </li>
+                <li>
+                  <strong>Languages:</strong> Slovak (native), English (native level), and German (native level).
+                </li>
               </ul>
             </div>
           </div>
@@ -234,10 +188,18 @@
             <div class="work__text">
               <h3>Selection of Awards &amp; Scholarships</h3>
               <ul class="work__list">
-                <li>Industrial doctorate scholarship from The Data Lab, the University of Edinburgh, and Inbest.ai.</li>
-                <li>DAAD scholarship for university studies in Germany.</li>
-                <li>DAAD Prize for best foreign student and best in class in Economics.</li>
-                <li>Teaching award from the School of Economics and Business, Freie Universität Berlin.</li>
+                <li>
+                  Industrial doctorate scholarship from The Data Lab, the University of Edinburgh, and Inbest.ai.
+                </li>
+                <li>
+                  DAAD scholarship for university studies in Germany.
+                </li>
+                <li>
+                  DAAD Prize for best foreign student and best in class in Economics.
+                </li>
+                <li>
+                  Teaching award from the School of Economics and Business, Freie Universität Berlin.
+                </li>
               </ul>
               <div class="work__links">
                 <a href="https://www.fu-berlin.de/campusleben/vorgestellt/2018/180117-andrej-svetlosak-daad-stipendiat/index.html"
@@ -245,7 +207,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -256,9 +217,11 @@
       <h2>Get in Touch</h2>
       <div class="contact__info">
         <p>
-          If you are looking to harness data, machine learning, or AI to generate insights and support decision making,
-          I would be pleased to hear from you. I am interested in practical collaborations in financial AI, data
-          science, statistical learning, explainable AI, Open Banking-Type data, and machine learning.
+          If you are looking to harness data, machine learning, or AI to
+          generate insights and support decision making, I would be pleased
+          to hear from you. I am interested in practical collaborations in
+          financial AI, data science, statistical learning, explainable AI,
+          Open Banking-Type data, and machine learning.
         </p>
         <a href="mailto:andrejsvetlosak@gmail.com" class="btn">Email Me</a>
         <br><br>
@@ -274,7 +237,8 @@
     <div class="row">
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/andrej-svetlosak/" target="_blank" rel="noopener noreferrer" title="Visit Andrej Svetlošák's LinkedIn profile">
+          <a href="https://www.linkedin.com/in/andrej-svetlosak/" target="_blank" rel="noopener noreferrer"
+             title="Visit Andrej Svetlošák's LinkedIn profile">
             <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn">
           </a>
         </li>
@@ -285,6 +249,6 @@
   <a href="#top" class="back-to-top" title="Back to Top">
     <img src="./images/arrow-up.svg" alt="Back to top" class="back-to-top__image" />
   </a>
-    <script src="./index.js"></script>
+  <script src="./index.js"></script>
 </body>
 </html>
